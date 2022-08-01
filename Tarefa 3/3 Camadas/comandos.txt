@@ -1,0 +1,8 @@
+pyro4-ns -n 172.31.84.36 -p 4000 &
+pyro4-ns -n 172.31.23.92 -p 4000 &
+
+python3 -u DatabaseRMI.py
+
+python3 -u ServidorRMI.py
+
+python3 -u ClienteRMI.py

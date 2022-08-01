@@ -1,0 +1,33 @@
+Passos para a Execucao:
+
+1) Copie todos os arquivos *.java /hellormi
+
+2) Compile todos os fontes Java:
+        $ javac *.java 
+
+3) Gere stub e skeleton
+        $ rmic HelloImpl
+
+4) Coloque o RMI registry no ar:
+	Unix:
+        	$ rmiregistry &
+	Windows:
+		Abra uma janela
+		cd c:\hellormi
+		rmiregistry
+
+5) Coloque o servidor no ar:
+	Unix:
+        	$ java -Djava.security.policy=policy HelloImpl &
+	Windows
+		Abra uma janela
+		cd c:\hellormi
+		java -Djava.security.policy=policy HelloImpl
+
+6) Execute o cliente:
+	Unix:
+        	$ java HelloApplet 
+	Windows:
+		Abra uma janela
+		cd c:\hellormi
+		java HelloApplet
